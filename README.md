@@ -73,5 +73,5 @@ $ ionic build Android
 
 ![](http://qiniu.ursb.me/image/ios-sunny-4.png-h600.jpg)
 
-![](http://qiniu.ursb.me/image/ios-sunny-5.jpg)
+![](http://qiniu.ursb.me/image/ios-sunny-5.png-h600.jpg)
 
