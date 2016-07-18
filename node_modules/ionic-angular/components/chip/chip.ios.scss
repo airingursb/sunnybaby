@@ -1,0 +1,19 @@
+@import "./chip";
+
+// iOS Chip
+// --------------------------------------------------
+
+
+// Generate iOS Chip Colors
+// --------------------------------------------------
+
+@each $color-name, $color-base, $color-contrast in get-colors($colors-ios) {
+
+  ion-chip {
+    ion-icon[#{$color-name}] {
+      color: $color-contrast;
+      background-color: $color-base;
+    }
+  }
+
+}

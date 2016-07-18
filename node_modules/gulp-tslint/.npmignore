@@ -1,0 +1,11 @@
+/node_modules
+/test/**/*.js
+*.map
+
+# Ignore from package:
+/test
+/types
+index.ts
+.travis.yml
+gulpfile.js
+tslint.json

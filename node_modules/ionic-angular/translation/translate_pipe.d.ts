@@ -1,0 +1,19 @@
+import { PipeTransform } from '@angular/core';
+import { Translate } from './translate';
+/**
+ * @private
+ * The Translate pipe makes it easy to translate strings.
+ *
+ * @usage
+ * Translate using the current language or language set through Translate.setLanguage
+ * {{ 'Please enter your location' | translate }}
+ *
+ * Translate using a specific language
+ * {{ 'Please enter your location' | translate:"de" }}
+ */
+export declare class TranslatePipe implements PipeTransform {
+    private translate;
+    constructor(translate: Translate);
+    transform(value: any, args: any): any;
+    supports(obj: any): boolean;
+}

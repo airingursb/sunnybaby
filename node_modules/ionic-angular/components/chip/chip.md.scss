@@ -1,0 +1,19 @@
+@import "./chip";
+
+// Material Design Chip
+// --------------------------------------------------
+
+
+// Generate Material Design Chip Colors
+// --------------------------------------------------
+
+@each $color-name, $color-base, $color-contrast in get-colors($colors-md) {
+
+  ion-chip {
+    ion-icon[#{$color-name}] {
+      color: $color-contrast;
+      background-color: $color-base;
+    }
+  }
+
+}
