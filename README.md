@@ -55,23 +55,23 @@ $ ionic build Android
 
 ### Running on Android
 
-![](http://qiniu.ursb.me/image/android-sunny-1.jpg)
+![](http://qiniu.ursb.me/image/android-sunny-1.jpg-h600.jpg)
 
-![](http://qiniu.ursb.me/image/android-sunny-2.jpg)
+![](http://qiniu.ursb.me/image/android-sunny-2.jpg-h600.jpg)
 
-![](http://qiniu.ursb.me/image/android-sunny-3.jpg)
+![](http://qiniu.ursb.me/image/android-sunny-3.jpg-h600.jpg)
 
-![](http://qiniu.ursb.me/image/android-sunny-4.jpg)
+![](http://qiniu.ursb.me/image/android-sunny-4.jpg-h600.jpg)
 
 ### Running on iOS
 
-![](http://qiniu.ursb.me/image/ios-sunny-1.jpg)
+![](http://qiniu.ursb.me/image/ios-sunny-1.png-h600.jpg)
 
-![](http://qiniu.ursb.me/image/ios-sunny-2.jpg)
+![](http://qiniu.ursb.me/image/ios-sunny-2.png-h600.jpg)
 
-![](http://qiniu.ursb.me/image/ios-sunny-3.jpg)
+![](http://qiniu.ursb.me/image/ios-sunny-3.png-h600.jpg)
 
-![](http://qiniu.ursb.me/image/ios-sunny-4.jpg)
+![](http://qiniu.ursb.me/image/ios-sunny-4.png-h600.jpg)
 
 ![](http://qiniu.ursb.me/image/ios-sunny-5.jpg)
 
