@@ -66,6 +66,7 @@ export class HelloIonicPage {
 			}
 		
 		});
+
 	}
 
 
@@ -73,9 +74,9 @@ export class HelloIonicPage {
 		console.log('weathers => ' + JSON.stringify(this.weathers));
     }
 
+
     addCity() {
-		let modalAddCityPage = Modal.create(AddCityPage);
-    	this.navController.present(modalAddCityPage);
+     	this.navController.push(AddCityPage);
     }
 
 }

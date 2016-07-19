@@ -114,7 +114,6 @@ var CityListPage = (function () {
                 {
                     text: '确定',
                     handler: function () {
-                        console.log(item);
                         var id = item.id;
                         _this.local.set('distrct' + id, "");
                         _this.local.set('weather' + id, "");
@@ -123,6 +122,36 @@ var CityListPage = (function () {
                         _this.local.get('num').then(function (result) {
                             console.log('num => ' + result);
                             _this.local.set('num', result--);
+                            _this.num = result;
+                            _this.weathers = [];
+                            for (var i = 1; i <= result; i++) {
+                                var city = "";
+                                var wea = "";
+                                var temp = "";
+                                var pic = "";
+                                var id = 0;
+                                _this.local.get('distrct' + i).then(function (result) {
+                                    city = result;
+                                    console.log(city);
+                                });
+                                _this.local.get('weather' + i).then(function (result) {
+                                    console.log(result);
+                                    wea = result;
+                                });
+                                _this.local.get('temperature' + i).then(function (result) {
+                                    console.log(result);
+                                    temp = result;
+                                });
+                                _this.local.get('picture' + i).then(function (result) {
+                                    console.log(result);
+                                    pic = result;
+                                    id++;
+                                    console.log("id => " + id);
+                                    var obj = new Weather(id, city, wea, temp, pic);
+                                    console.log(obj);
+                                    _this.weathers.push(obj);
+                                });
+                            }
                         });
                         var toastDelOk = ionic_angular_1.Toast.create({
                             message: "删除成功！",
@@ -413,8 +442,7 @@ var HelloIonicPage = (function () {
         console.log('weathers => ' + JSON.stringify(this.weathers));
     };
     HelloIonicPage.prototype.addCity = function () {
-        var modalAddCityPage = ionic_angular_1.Modal.create(add_city_1.AddCityPage);
-        this.navController.present(modalAddCityPage);
+        this.navController.push(add_city_1.AddCityPage);
     };
     HelloIonicPage = __decorate([
         core_1.Component({

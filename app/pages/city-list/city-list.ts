@@ -15,7 +15,6 @@ export class CityListPage {
 	local: Storage;
 	sqlStorage: SqlStorage;
 
-
   	constructor(private http: Http,
   		private navController: NavController,
   		private viewController: ViewController,
@@ -46,7 +45,6 @@ export class CityListPage {
 				{
 					text: '确定',
 					handler: () => {
-					console.log(item)
 						var id = item.id;
 						this.local.set('distrct' + id, "");
 						this.local.set('weather' + id, "");
@@ -55,6 +53,38 @@ export class CityListPage {
 						this.local.get('num').then((result) => {
 							console.log('num => ' + result);
 							this.local.set('num', result --);
+							this.num = result;
+							this.weathers = [];
+							for (var i = 1; i <= result; i++) {
+
+								var city = "";
+								var wea = "";
+								var temp = "";
+								var pic = "";
+								var id = 0;
+
+								this.local.get('distrct' + i).then((result) => {
+									city = result;
+									console.log(city);
+								});
+								this.local.get('weather' + i).then((result) => {
+									console.log(result);
+									wea = result;
+								});
+								this.local.get('temperature' + i).then((result) => {
+									console.log(result);
+									temp = result;
+								});
+								this.local.get('picture' + i).then((result) => {
+									console.log(result);
+									pic = result;
+									id ++;
+									console.log("id => " + id);
+									var obj = new Weather(id, city, wea, temp, pic);
+									console.log(obj);
+									this.weathers.push(obj);
+								});
+							}
 						});
 
 						let toastDelOk = Toast.create({
@@ -70,41 +100,40 @@ export class CityListPage {
 	}
 
 	onPageWillEnter() {
+	   	this.local.get('num').then((result) => {
+		console.log('num => ' + result);
+		this.num = result;
 
-		this.local.get('num').then((result) => {
-			console.log('num => ' + result);
-			this.num = result;
+		for (var i = 1; i <= result; i++) {
 
-			for (var i = 1; i <= result; i++) {
+			var city = "";
+			var wea = "";
+			var temp = "";
+			var pic = "";
+			var id = 0;
 
-				var city = "";
-				var wea = "";
-				var temp = "";
-				var pic = "";
-				var id = 0;
-
-				this.local.get('distrct' + i).then((result) => {
-					city = result;
-					console.log(city);
-				});
-				this.local.get('weather' + i).then((result) => {
-					console.log(result);
-					wea = result;
-				});
-				this.local.get('temperature' + i).then((result) => {
-					console.log(result);
-					temp = result;
-				});
-				this.local.get('picture' + i).then((result) => {
-					console.log(result);
-					pic = result;
-					id ++;
-					console.log("id => " + id);
-					var obj = new Weather(id, city, wea, temp, pic);
-					console.log(obj);
-					this.weathers.push(obj);
-				});
-			}
+			this.local.get('distrct' + i).then((result) => {
+				city = result;
+				console.log(city);
+			});
+			this.local.get('weather' + i).then((result) => {
+				console.log(result);
+				wea = result;
+			});
+			this.local.get('temperature' + i).then((result) => {
+				console.log(result);
+				temp = result;
+			});
+			this.local.get('picture' + i).then((result) => {
+				console.log(result);
+				pic = result;
+				id ++;
+				console.log("id => " + id);
+				var obj = new Weather(id, city, wea, temp, pic);
+				console.log(obj);
+				this.weathers.push(obj);
+			});
+		}
 
 		});
 	}
