@@ -33,7 +33,7 @@ export class CityListPage {
   	}
 
 	itemSelected(item){
-		
+
 
 		let confirm = Alert.create({
       		title: '晴宝',
@@ -100,6 +100,9 @@ export class CityListPage {
 	}
 
 	onPageWillEnter() {
+
+        this.weathers = [];
+
 	   	this.local.get('num').then((result) => {
 		console.log('num => ' + result);
 		this.num = result;

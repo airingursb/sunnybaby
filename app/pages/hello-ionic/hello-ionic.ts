@@ -33,6 +33,8 @@ export class HelloIonicPage {
 
   	onPageWillEnter() {
 
+        this.weathers = [];
+
 		this.local.get('num').then((result) => {
 			console.log('num => ' + result);
 			this.num = result;

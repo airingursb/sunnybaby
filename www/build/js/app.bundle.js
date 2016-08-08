@@ -166,6 +166,7 @@ var CityListPage = (function () {
     };
     CityListPage.prototype.onPageWillEnter = function () {
         var _this = this;
+        this.weathers = [];
         this.local.get('num').then(function (result) {
             console.log('num => ' + result);
             _this.num = result;
@@ -408,6 +409,7 @@ var HelloIonicPage = (function () {
     }
     HelloIonicPage.prototype.onPageWillEnter = function () {
         var _this = this;
+        this.weathers = [];
         this.local.get('num').then(function (result) {
             console.log('num => ' + result);
             _this.num = result;
