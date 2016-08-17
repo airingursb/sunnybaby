@@ -2,6 +2,9 @@
 
 晴宝，最简洁的天气应用。
 
+> iOS 版已上架 Apple Store，欢迎[下载](https://itunes.apple.com/us/app/qing-bao/id1140842775)
+> 项目地址：[http://github.com/airingursb/sunnybaby-iOS](http://github.com/airingursb/sunnybaby-iOS)
+
 ## System information
 
 ```
